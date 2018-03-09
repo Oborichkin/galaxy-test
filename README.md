@@ -1,4 +1,4 @@
-# Тестовое задание на должность junior front-end developer
+# Тестовое задание для junior front-end developer
 
 ## Desktop
 
