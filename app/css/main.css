@@ -200,7 +200,7 @@ footer {
   -webkit-border-radius: 8px;
   border-radius: 8px;
   position: relative;
-  top: 5px;
+  top: 6px;
 }
 
 #services .content input:checked + label {
@@ -218,8 +218,8 @@ footer {
 
 #services .content input:checked + label:before {
   content: '+';
-  padding-left: 1px;
-  line-height: 13px;
+  padding-left: 2px;
+  line-height: 12px;
 }
 
 #services footer {
