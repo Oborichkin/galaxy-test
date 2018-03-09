@@ -1,22 +1,62 @@
-/* TODO: Add basic variables */
-/* TODO: Create responsive mixins */
-/* TODO: Utilze mixins and redo some styles for responsive design */
+$small: 768px
+$large: 1200px
+
+$grey: #949494
+
+$mainFont: 'Adobe Garamond Pro', Georgia, 'Times New Roman', serif
+
+@mixin respond-to($media)
+    @if $media == handhelds
+        @media only screen and (max-width: $small)
+            @content
+    @else if $media == medium-screens
+        @media only screen and (min-width: $small + 1) and (max-width: $large - 1)
+            @content
+    @else if $media == wide-screens
+        @media only screen and (min-width: $large)
+            @content
+
+html
+    height: 100%
+    box-sizing: border-box
+
+*,
+*:before,
+*:after
+    box-sizing: inherit
 
 body
     font-size: 14px
-    min-height: 600px
-    min-width: 1024px
-    
-header
-    background: #000
-    height: 66vh
-    position: relative
-    .logo
+    font-family: $mainFont
+    @include respond-to(handhelds)
+        font-size: 12px
+    @include respond-to(medium-screens)
+        font-size: 14px
+    @include respond-to(wide-screens)
+        font-size: 18px
+        
+#index
+    a
+        &:hover
+            text-decoration: underline
+    header
+        background: #000
+        position: relative
+        height: 66vh
+        @include respond-to(handhelds)
+            height: 44vh
+        .logo
+            position: absolute
+            bottom: 43px
+            left: 0
+            right: 0
+            min-width: 250px
+            width: 15%
+            margin: auto
+    footer
+        text-align: center
         position: absolute
-        width: 15%
-        min-width: 250px
-        margin: auto
-        bottom: 43px
+        bottom: 0
         left: 0
         right: 0
 
@@ -28,21 +68,133 @@ nav
         padding: 0
         li
             display: inline-block
+            @include respond-to(handhelds)
+                display: block
             a
                 display: block
                 padding-top: 2.57em
                 margin-right: 2.5em
                 color: black
                 text-decoration: none
+                @include respond-to(handhelds)
+                    margin-right: 0
             &:last-child
                 a
                     margin-right: 0
 
 footer
-    position: absolute
-    bottom: 0
-    left: 0
-    right: 0
-    text-align: center
     font-size: 0.79em
-    color: #949494
+    color: $grey
+
+#services
+    background: url('../img/bg.jpg') no-repeat center center fixed
+    color: white
+    background-size: cover
+    min-height: 100%
+    position: relative
+    padding-bottom: 6rem
+    margin: 0
+    @include respond-to(medium-screens)
+        min-width: 950px
+    @include respond-to(handhelds)
+        background-size: 200%
+    header
+        padding-top: 88px
+        margin-left: 36px
+        margin-bottom: 64px
+        position: relative
+        .logo
+            width: 150px
+        nav
+            text-align: left
+            position: absolute
+            left: 326px
+            @include respond-to(handhelds)
+                left: 200px
+            bottom: 0
+            ul
+                li
+                    a
+                        color: $grey
+                        font-style: bold
+                        font-weight: bold
+                        padding-top: 0
+                        position: relative
+                        display: inline-block
+                        transition: color 0.3s
+                        @include respond-to(handhelds)
+                            padding-top: 1em
+                        &:before, &:after
+                            position: absolute
+                            left: 0
+                            width: 100%
+                            height: 2px
+                            background: white
+                            content: ''
+                            opacity: 0
+                            transition: opacity 0.3s, transform 0.3s
+                            box-sizing: border-box
+                            @include respond-to(handhelds)
+                                display: none
+                        &:before
+                            top: -5px
+                            transform: translateY(-10px)
+                        &:after
+                            bottom: -5px
+                            transform: translateY(10px)
+                        &:hover, &.current
+                            color: white
+                            &:before, &:after
+                                opacity: 1
+                                transform: translateY(0)
+    .content
+        padding-left: 54px
+        padding-right: 54px
+        max-width: 768px
+        text-align: left
+        @include respond-to(handhelds)
+            max-width: 100%
+        input
+            display: none
+        label
+            font-size: 1.5625em
+            font-weight: 600
+            font-style: italic
+            + p
+                max-height: 0
+                overflow: hidden
+                transition: 0.25s ease-out
+                line-height: 1.75em
+                font-style: normal
+            &:before
+                content: '-'
+                font-size: 20px
+                float: left
+                color: black
+                background-color: white
+                margin-right: 1em
+                display: block
+                width: 16px
+                height: 16px
+                padding-left: 4.5px
+                line-height: 12px
+                box-sizing: border-box
+                border-radius: 8px
+                position: relative
+                top: 5px
+        input:checked
+            + label
+                font-weight: 600
+                font-style: normal
+                text-transform: uppercase
+                + p
+                    max-height: 300px
+                    transition: 0.25s ease-in
+                &:before
+                    content: '+'
+                    padding-left: 1px
+                    line-height: 13px
+    footer
+        position: absolute
+        left: 36px
+        bottom: 24px

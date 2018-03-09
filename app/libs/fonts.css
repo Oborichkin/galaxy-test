@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'ClementePDaa';
+    src: url('ClementePDaa-Hairline.eot');
+    src: url('ClementePDaa-Hairline.eot?#iefix') format('embedded-opentype'),
+        url('ClementePDaa-Hairline.woff2') format('woff2'),
+        url('ClementePDaa-Hairline.woff') format('woff'),
+        url('ClementePDaa-Hairline.ttf') format('truetype'),
+        url('ClementePDaa-Hairline.svg#ClementePDaa-Hairline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Adobe Garamond Pro';
+    src: url('AGaramondPro-SemiboldItalic.eot');
+    src: url('AGaramondPro-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+        url('AGaramondPro-SemiboldItalic.woff2') format('woff2'),
+        url('AGaramondPro-SemiboldItalic.woff') format('woff'),
+        url('AGaramondPro-SemiboldItalic.ttf') format('truetype'),
+        url('AGaramondPro-SemiboldItalic.svg#AGaramondPro-SemiboldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Adobe Caslon Pro';
+    src: url('ACaslonPro-Italic.eot');
+    src: url('ACaslonPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('ACaslonPro-Italic.woff2') format('woff2'),
+        url('ACaslonPro-Italic.woff') format('woff'),
+        url('ACaslonPro-Italic.ttf') format('truetype'),
+        url('ACaslonPro-Italic.svg#ACaslonPro-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Adobe Garamond Pro';
+    src: url('AGaramondPro-Regular.eot');
+    src: url('AGaramondPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('AGaramondPro-Regular.woff2') format('woff2'),
+        url('AGaramondPro-Regular.woff') format('woff'),
+        url('AGaramondPro-Regular.ttf') format('truetype'),
+        url('AGaramondPro-Regular.svg#AGaramondPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Adobe Garamond Pro';
+    src: url('AGaramondPro-Semibold.eot');
+    src: url('AGaramondPro-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('AGaramondPro-Semibold.woff2') format('woff2'),
+        url('AGaramondPro-Semibold.woff') format('woff'),
+        url('AGaramondPro-Semibold.ttf') format('truetype'),
+        url('AGaramondPro-Semibold.svg#AGaramondPro-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Adobe Caslon Pro';
+    src: url('ACaslonPro-SemiboldItalic.eot');
+    src: url('ACaslonPro-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+        url('ACaslonPro-SemiboldItalic.woff2') format('woff2'),
+        url('ACaslonPro-SemiboldItalic.woff') format('woff'),
+        url('ACaslonPro-SemiboldItalic.ttf') format('truetype'),
+        url('ACaslonPro-SemiboldItalic.svg#ACaslonPro-SemiboldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Adobe Garamond Pro';
+    src: url('AGaramondPro-Bold.eot');
+    src: url('AGaramondPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('AGaramondPro-Bold.woff2') format('woff2'),
+        url('AGaramondPro-Bold.woff') format('woff'),
+        url('AGaramondPro-Bold.ttf') format('truetype'),
+        url('AGaramondPro-Bold.svg#AGaramondPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
